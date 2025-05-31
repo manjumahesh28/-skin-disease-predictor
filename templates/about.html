@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %} Login Page {% endblock %}
+{% block content %}
+<style>
+.abt{
+    padding: 20px;
+    margin-bottom:70px;
+}
+.box{
+    background-color: skyblue;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    transition: .5s;
+    margin-bottom: 50px;
+}
+.box:hover{
+    transform:translateY(-10px);
+    cursor: pointer;
+}
+p{
+    font-size: 20px;
+}
+
+</style>
+
+<div class="abt">
+    
+    <div class="box">
+        <h1>Skin Cancer Diagnosis</h1>
+        <p> Skin cancer diagnosis involves identifying abnormal skin growths that may indicate cancerous cells, often through visual inspection, biopsy, and imaging techniques. The most common types of skin cancer include basal cell carcinoma, squamous cell carcinoma, and melanoma, with melanoma being the deadliest form. Early detection is critical for successful treatment, as skin cancer can spread if left untreated. Dermatologists often use the ABCDE rule (Asymmetry, Border irregularity, Color variation, Diameter, and Evolving changes) to identify suspicious moles or lesions. Advances in medical technology, such as dermoscopy and digital imaging, have improved diagnostic accuracy. Machine learning and artificial intelligence (AI) have also played a pivotal role in the field by helping to analyze skin lesions through image recognition and pattern detection, aiding in early diagnosis and reducing human error. For diagnosis confirmation, a biopsy may be performed, where a sample of the suspicious tissue is examined under a microscope. Non-invasive methods, like blood tests and genetic testing, are also emerging as potential tools in skin cancer detection. Regular self-examinations and professional dermatological check-ups are essential for at-risk individuals, especially those with fair skin, a history of sunburns, or a family history of skin cancer. Treatment options depend on the type, location, and stage of the cancer and can include surgical removal, radiation therapy, or immunotherapy. </p>
+    </div>
+
+    
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html '%}
+{% block title %} Result {% endblock %}
+
+{% block content %}
+<style>
+    .pred{
+        text-align: center;
+        margin-top: 90px;
+    }
+    div h1{
+        font-size: 40px;
+        color: white;
+
+    }
+    div p {
+        font-size: 30px;
+    
+    }
+    div p strong{
+        color: rgb(255, 255, 255);
+    }
+    div p {
+        color:white;
+    }
+    .pred .btn{
+    padding: 10px;
+    margin: 10px;
+    background-color: skyblue;
+    color: white;
+    border-radius: 20px;
+    transition: .5s ;
+    border: none; 
+    }
+    .btn a {
+        text-decoration: none;
+        color: rgb(254, 254, 254);
+    }
+     .btn:hover{
+        transform: translateY(-7px);
+     }
+
+
+
+</style>
+<div class="pred">
+
+    <h1>Prediction Result</h1>
+    <!-- <p>The uploaded image is classified as: <strong>{{ prediction }}</strong></p> -->
+    <p class="text-center"><strong>Condition:</strong> {{ predictions }}</p>
+    <p class="text-center"><strong>Confidence:</strong> {{ acc | round(2) }}%</p>
+    <div class="btn">
+        <a href="/">Upload another image</a></div>
+</div>   
+
+{% endblock %}
+

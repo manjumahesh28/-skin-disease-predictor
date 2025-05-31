@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %} Upload image {% endblock %}
+{% block content %}
+<style>
+    .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 60px); 
+        background: url('/static/image2.jpg') no-repeat center center fixed;
+        background-size: cover;
+        padding-top: 60px; 
+    }
+   
+
+    .h1 {
+        margin: 20px;
+        color: black;
+        text-align: center;
+    }
+
+    .image {
+        width: 50%;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        border: 2px solid aquamarine;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    .image h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .image button {
+        padding: 15px 30px;
+        margin: 10px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        background-color: #189AB4;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .image button:hover {
+        transform: translateY(-5px);
+        background-color: #145C74;
+    }
+
+    .image input[type="file"] {
+        display: none;
+    }
+
+    .custom-file-upload {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 10px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #189AB4;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .custom-file-upload:hover {
+        transform: translateY(-5px);
+        background-color: #145C74;
+    }
+</style>
+
+<div class="content-wrapper">
+    <div class="image">
+        <h1>Upload an Image for Classification</h1>
+        <!-- <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data"> -->
+        <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+   
+            <label for="file-upload" class="custom-file-upload">Choose Image</label>
+            <input id="file-upload" type="file" name="file" accept="image/*">
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
